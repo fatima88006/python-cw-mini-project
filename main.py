@@ -3,16 +3,15 @@ def padel_court_cost(court_type):
         return 30
     elif court_type == "outdoor":
         return 20
-    else:
-        return False
 
 def rackets_cost(racket_brand):
-    if rackets_brand == "bullpadel":
+    if racket_brand == "bullpadel":
         return 100
     elif racket_brand == "nox":
         return 140
     elif racket_brand == "siux": 
         return 200
+
 
 def padel_balls_cost(ball_boxes):
     if ball_boxes == 1:
@@ -23,10 +22,10 @@ def padel_balls_cost(ball_boxes):
         return 5
 
 def padel_game_cost():
-    court_type = (input("Enter the court type:"))
-    rackets_cost = (input("Enter racket brand:"))
-    ball_boxes = int(input("1 / 2 / 3 ?"))
-    result = ("padel_court_cost (court_type) + padel_balls_cost (ball_boxes) + rackets_cost (rackets_brand)" )
-    return result
+    court_type = (input("Enter the court type: indoor \ outdoor\n"))
+    racket_brand = (input("Enter racket brand: bullpadel \ nox \ siux \n"))
+    ball_boxes = int(input("Enter the number of the balls 1 / 2 / 3 \n?"))
+    cost = padel_court_cost(court_type) + rackets_cost(racket_brand) + padel_balls_cost(ball_boxes)
+    return cost
 
-print(padel_game_cost()) 
+print (padel_game_cost()) 
