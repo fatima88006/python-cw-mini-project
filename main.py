@@ -28,4 +28,5 @@ def padel_game_cost():
     cost = padel_court_cost(court_type) + rackets_cost(racket_brand) + padel_balls_cost(ball_boxes)
     return cost
 
-print (padel_game_cost())  
+print (padel_game_cost()) 
+
